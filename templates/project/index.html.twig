@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProjectController!{% endblock %}
+
+{% block body %}
+<h1>Il y a {{ project_list|length }} Projets:</h1>
+
+<ul>
+{% for project in project_list %}
+    <li> {{ project }} </li>
+{% endfor %}
+</ul>
+<p>The current projects are {{ project_list|join(', ', ' and ') }}</p>
+{% endblock %}
